@@ -15,9 +15,5 @@ inline void putd(int pin, int level) {
   pinMode(pin, OUTPUT);
   digitalWrite(pin, level);
 }
-inline void puta(int pin, int level) {
-  pinMode(pin, OUTPUT);
-  ledcWrite(pin, level);
-}
 
 #endif
