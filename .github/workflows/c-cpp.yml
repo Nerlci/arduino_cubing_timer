@@ -15,5 +15,9 @@ jobs:
     - uses: actions/checkout@v2
     - name: platformio setup
       run: python3 -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/master/scripts/get-platformio.py)"
+    - name: toolchain-riscv-esp get
+      run: wget https://github.com/espressif/crosstool-NG/releases/download/esp-2021r2/riscv32-esp-elf-gcc8_4_0-esp-2021r2-linux-amd64.tar.gz
+    - name: toolchain-riscv-esp setup
+      run: tar zxvf riscv32-esp-elf-gcc8_4_0-esp-2021r2-linux-amd64.tar.gz && cp ./riscv32-esp-elf-gcc8_4_0-esp-2021r2-linux-amd64 /home/runner/.platformio/packages/toolchain-riscv-esp/
     - name: platformio build
       run: /home/runner/.platformio/penv/bin/platformio run
