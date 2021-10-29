@@ -16,4 +16,4 @@ jobs:
     - name: platformio setup
       run: python3 -c "$(curl -fsSL https://raw.githubusercontent.com/platformio/platformio/master/scripts/get-platformio.py)"
     - name: platformio build
-      run: pio run
+      run: /home/runner/.platformio/penv/bin/platformio run
