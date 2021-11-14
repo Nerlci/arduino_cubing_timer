@@ -18,4 +18,4 @@ jobs:
     - name: toolchain-riscv-esp setup
       run: wget https://github.com/espressif/crosstool-NG/releases/download/esp-2021r2/riscv32-esp-elf-gcc8_4_0-esp-2021r2-linux-amd64.tar.gz && tar zxvf riscv32-esp-elf-gcc8_4_0-esp-2021r2-linux-amd64.tar.gz && mv riscv32-esp-elf/ toolchain-riscv-esp/ && mv toolchain-riscv-esp/ /home/runner/.platformio/packages/
     - name: platformio build
-      run: /home/runner/.platformio/penv/bin/platformio run
+      run: /home/runner/.platformio/penv/bin/platformio update
